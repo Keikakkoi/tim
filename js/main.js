@@ -1,70 +1,81 @@
-// Sample car data (in a real application, this would come from a database)
-const cars = [
-  {
-    id: 1,
-    brand: "Toyota",
-    model: "Camry",
-    year: 2022,
-    price: 350000000,
-    image: "https://example.com/camry.jpg",
+// Animasi fade-in ketika gambar muncul di viewport saat di-scroll
+const gridItems = document.querySelectorAll(".grid-item");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
   },
   {
-    id: 2,
-    brand: "Honda",
-    model: "Civic",
-    year: 2023,
-    price: 370000000,
-    image: "https://example.com/civic.jpg",
-  },
-  {
-    id: 3,
-    brand: "Ford",
-    model: "Mustang",
-    year: 2022,
-    price: 800000000,
-    image: "https://example.com/mustang.jpg",
-  },
-  // Add more car objects as needed
-];
+    threshold: 0.5,
+  }
+);
 
-// Function to create a car card element
-function createCarCard(car) {
-  const card = document.createElement("div");
-  card.classList.add("car-card", "animate-fadeIn");
+gridItems.forEach((item) => {
+  item.style.opacity = "0";
+  item.style.transform = "translateY(20px)";
+  item.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+  observer.observe(item);
+});
 
-  card.innerHTML = `
-        <img src="${car.image}" alt="${car.brand} ${
-    car.model
-  }" class="car-image">
-        <div class="car-info">
-            <h3 class="car-title">${car.brand} ${car.model} (${car.year})</h3>
-            <p class="car-price">Rp ${car.price.toLocaleString()}</p>
-        </div>
-    `;
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.style.padding = "0.5rem 0";
+    header.style.transition = "padding 0.3s ease-in-out";
+  } else {
+    header.style.padding = "1rem 0";
+  }
+});
 
-  return card;
-}
+const socialIcons = document.querySelectorAll(".social-icons img");
 
-// Function to populate the car grid
-function populateCarGrid() {
-  const carGrid = document.getElementById("carGrid");
-  cars.forEach((car) => {
-    const carCard = createCarCard(car);
-    carGrid.appendChild(carCard);
+socialIcons.forEach((icon) => {
+  icon.style.transition = "transform 0.3s ease";
+  icon.addEventListener("mouseover", () => {
+    icon.style.transform = "scale(1.2)";
   });
-}
-
-// Call the function when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", populateCarGrid);
-
-// Add smooth scrolling to nav links
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
+  icon.addEventListener("mouseout", () => {
+    icon.style.transform = "scale(1)";
   });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const contentWrapper = document.querySelector(".content-wrapper");
+  contentWrapper.style.opacity = "0";
+  contentWrapper.style.transform = "translateY(20px)";
+  contentWrapper.style.transition = "transform 0.8s ease";
+
+  setTimeout(() => {
+    contentWrapper.style.opacity = "1";
+    contentWrapper.style.transform = "translate(0)";
+  }, 500);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const imageContent = document.querySelector(".image-content img");
+  imageContent.style.transform = "scale(0.8)";
+  imageContent.style.opacity = "0";
+  imageContent.style.transition = "transform 0.7s ease-out";
+
+  setTimeout(() => {
+    imageContent.style.transform = "scale(1)";
+    imageContent.style.opacity = "1";
+  }, 700);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const heroText = document.querySelector(".hero-text");
+  heroText.style.opacity = "0";
+  heroText.style.transform = "translateY(20px)";
+  heroText.style.transition = "transform 1s ease-out";
+
+  setTimeout(() => {
+    heroText.style.opacity = "1";
+    heroText.style.transform = "translate(0)";
+  }, 1000);
 });
