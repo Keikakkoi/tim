@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AutoMobil - Toko Penjualan Mobil</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>AutoCar - Car Company</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="container">
-        <div id="logo">
-          <h1>AutoMobil</h1>
+        <div id="logo" data-aos="flip-down">
+          <h1>AutoCar</h1>
         </div>
         <nav>
           <ul>
-            <li><a href="index.html" class="nav-link">Beranda</a></li>
-            <li><a href="html/daftar-mobil.html" class="nav-link">Daftar mobil</a></li>
-            <li><a href="html/about.html" class="nav-link">Tentang Kami</a></li>
-            <li><a href="html/syarat&ketentuan.html" class="nav-link"> Syarat dan Ketentuan</a></li>
-            <li><a href="html/hubungi-Kami.html" class="nav-link">Kontak</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="car-list.html" class="nav-link">Car List</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="syarat&ketentuan.html" class="nav-link"> Terms and Conditions</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -26,111 +27,226 @@
 
     <main>
       <div class="content-wrapper">
-        <div class="text-content">
-            <h1>Cari <span>Mobil</span></h1>
-            <h1>Untuk <span>Kenyamanan</span></h1>
-            <h1>Perjalanan Anda</h1>
-            <p>Kemudahan dengan melakukan pembelian mobil dengan aman dan terpercaya tentunya denga harga yang murah</p>
-            <a href="html/daftar-mobil.html" class="cta-button">Lihat Mobil</a>
+        <div class="text-content" data-aos="fade-up">
+            <h1>Look For a <span>Car</span></h1>
+            <h1>For The <span>Comfort</span></h1>
+            <h1>Of Your Trip</h1>
+            <p>The Convenience Of Purchasing a car safely and reliably is of course a cheap price</p>
+            <a href="car-list.html" class="cta-button">View Car</a>
         </div>
-        <div class="image-content">
+        <div class="image-content" data-aos="fade-up">
           <img
-            src="png/PinClipart.com_happy-retirement-clip-art_1168878-removebg-preview.png"
+            src="png/racing-cars-png-hd-mclaren-mp4-12c-gt3-racing-car-png-image-1019.png"
             alt="Car illustration"
           />
         </div>
       </section>
     </main>
 
-    <div class="hero-text">
+    <div class="hero-text" data-aos="fade-up" >
       <h3>Life Is Journey</h3>
       <p>
-        The comfort of the journey you are on, as beautiful as the eyes seeing
-        the open nature
+        The car has become the carapace, the protective and aggressive shell, of urban and suburban man
       </p>
     </div>
 
-    <div class="grid-car-container">
-      <figure class="grid-item">
-        <img src="img/alphard.jpg" alt="Alphard" />
+      <div class="carousel-container" data-aos="fade-up">
+                <!-- New Car Label in the top-left corner -->
+                <div class="new-car-label">New Car</div>        
+          <div class="carousel-wrapper">
+          <div class="carousel-slide">
+              <div class="carousel-item" data-aos="fade-up" data-aos-duration="100">
+                  <img src="webp/pexels-mikebirdy-193021-min_8_11zon.webp" alt="Y Plus">
+                  <p>Y Plus<br><span>Rp 415.000.000 - Rp 475.000.000</span></p>
+              </div>
+              <div class="carousel-item" data-aos="fade-up" data-aos-duration="200">
+                  <img src="webp/pexels-mikebirdy-116675-min_6_11zon.webp" alt="Kona Electric">
+                  <p>Kona Electric<br><span>Rp 499.000.000 - Rp 590.000.000</span></p>
+              </div>
+              <div class="carousel-item" data-aos="fade-up" data-aos-duration="300">
+                  <img src="webp/pexels-mikebirdy-205740-min_10_11zon.webp" alt="X">
+                  <p>X<br><span>Rp 428.000.000 - Rp 448.000.000</span></p>
+              </div>
+              <div class="carousel-item" data-aos="fade-up" data-aos-duration="400">
+                  <img src="webp/pexels-mikebirdy-99435-min_5_11zon.webp" alt="Cyberster">
+                  <p>Cyberster<br><span>Rp 1.688.000.000 - Rp 0</span></p>
+              </div>
+              <div class="carousel-item" data-aos="fade-up" data-aos-duration="500">
+                  <img src="webp/pexels-mikebirdy-170811-min_7_11zon.webp" alt="Cyberster">
+                  <p>YZ<br><span>Rp 3.688.000.000 - Rp 4.688.000.000</span></p>
+              </div>
+              <div class="carousel-item" data-aos="fade-up" data-aos-duration="600">
+                  <img src="webp/pexels-mikebirdy-120049-min_3_11zon.webp" alt="Cyberster">
+                  <p>BMW<br><span>Rp 1.570.000.000 - Rp 4.100.000.000</span></p>
+              </div>
+              <div class="carousel-item">
+                  <img src="webp/pexels-mikebirdy-93632-min_4_11zon.webp" data-aos="fade-up" data-aos-duration="700">
+                  <p>Lamborghini<br><span>Rp 4.120.000.000 - Rp 6.200.000</span></p>
+              </div>
+              <div class="carousel-item">
+                  <img src="webp/pexels-mikebirdy-136872-min_2_11zon.webp" data-aos="fade-up" data-aos-duration="800">
+                  <p>Angel Dom<br><span>Rp 6.700.000.000 - Rp 8.340.000</span></p>
+              </div>
+          </div>
+        </div>
+          
+        <div class="hero-text" data-aos="fade-up" data-aos-duration="500">
+          <h3>Driving Your World</h3>
+          <p>
+            The comfort of the journey you are on, as beautiful as the eyes seeing
+            Driving is a spectacular form of amnesia. Everything is to be discovered, everything to be obliterated
+          </p>
+        </div>
+
+    <div class="grid-car" >
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="100">
+        <img src="webp/pexels-mikebirdy-1007410-min_1_11zon.webp" alt="Alphard" />
         <figcaption>Alphard</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/Angel Dom.jpg" alt="Angel Dom" />
+      <figure class="grid-item"data-aos="fade-up" data-aos-duration="200">
+        <img src="webp/pexels-mikebirdy-1035108-min_13_11zon.webp" alt="Angel Dom" />
         <figcaption>Angel Dom</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/avanza.jpeg" alt="Avanza" />
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="300">
+        <img src="webp/pexels-mikebirdy-116675-min_6_11zon.webp" alt="Avanza" />
         <figcaption>Avanza</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/kijang.jpg" alt="Kijang" />
+      <figure class="grid-item"data-aos="fade-up" data-aos-duration="400">
+        <img src="webp/pexels-mikebirdy-170811-min_7_11zon.webp" alt="Kijang" />
         <figcaption>Kijang</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/Nissan.jpg" alt="Nissan" />
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="500">
+        <img src="webp/pexels-mikebirdy-193021-min_8_11zon.webp" alt="Nissan" />
         <figcaption>Nissan</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/perodua alza.jpg" alt="Perodua Alza" />
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="600">
+        <img src="webp/pexels-mikebirdy-195633-min_9_11zon.webp" alt="Perodua Alza" />
         <figcaption>Perodua Alza</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/Tesla.jpg" alt="Telsa" />
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="700">
+        <img src="webp/pexels-brett-sayles-3226806-min_15_11zon.webp" alt="Telsa" />
         <figcaption>Tesla</figcaption>
       </figure>
-      <figure class="grid-item">
-        <img src="img/Mazda.jpg" alt="Mazda" />
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="800">
+        <img src="webp/pexels-mikebirdy-99435-min_5_11zon.webp" alt="Mazda" />
         <figcaption>Nazda</figcaption>
       </figure>
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="900">
+        <img src="webp/pexels-mikebirdy-241316-min_11_11zon.webp" alt="Mazda" />
+        <figcaption>BMW</figcaption>
+      </figure>
+      <figure class="grid-item" data-aos="fade-up" data-aos-duration="1000">
+        <img src="webp/pexels-mikebirdy-205740-min_10_11zon.webp" alt="Mazda" />
+        <figcaption>Innova</figcaption>
+      </figure>
     </div>
+      </div>
 
-    <div class="info-container">
-      <div class="company-info">
-        <img src="svg/car-front-svgrepo-com.svg" alt="AutoMobil" class="logo" />
+      <div class="company">
+        <h2 data-aos="fade-up" data-aos-duration="100">Trusted By</h2>
+
+    <div class="company-container">
+      <img
+        src="companies svg/amazon-icon-logo-svgrepo-com.svg"
+        alt="Amazon" data-aos="fade-up" data-aos-duration="100"
+      />
+      <img
+        src="companies svg/apple-logo-svgrepo-com.svg" data-aos="fade-up" data-aos-duration="100"
+        alt="Apple Logo"
+      />
+      <img
+        src="companies svg/apple-pay-logo-svgrepo-com.svg"
+        alt="Apple Pay" data-aos="fade-up" data-aos-duration="100"
+      />
+      <img
+        src="companies svg/bmw-logo-svgrepo-com.svg"
+        alt="BMW" data-aos="fade-up" data-aos-duration="100"
+      />
+      <img
+        src="companies svg/forbes-logo-svgrepo-com.svg"
+        alt="Forbes" data-aos="fade-up" data-aos-duration="200"
+      />
+      <img
+        src="companies svg/netflix-2-logo-svgrepo-com.svg"
+        alt="Netflix" data-aos="fade-up" data-aos-duration="200"
+      />
+      <img
+        src="companies svg/yamaha-2-1-logo-svgrepo-com.svg"
+        alt="Yamaha" data-aos="fade-up" data-aos-duration="200"
+      />
+      <img
+        src="companies svg/xbox-one-logo-svgrepo-com.svg"
+        alt="Xbox One" data-aos="fade-up" data-aos-duration="200"
+      />
+      <img
+        src="companies svg/facebook-icon-logo-svgrepo-com.svg"
+        alt="Facebook" data-aos="fade-up" data-aos-duration="300"
+      />
+      <img
+        src="companies svg/coca-cola-logo-svgrepo-com.svg"
+        alt="Coca-Cola" data-aos="fade-up" data-aos-duration="300"
+      />
+      <img
+        src="companies svg/download-on-the-app-store-apple-logo-svgrepo-com.svg"
+        alt="App Store" data-aos="fade-up" data-aos-duration="300"
+      />
+      <img
+        src="companies svg/mercedes-benz-9-logo-svgrepo-com.svg"
+        alt="Marcedes-Benz" data-aos="fade-up" data-aos-duration="300"
+      />
+    </div>
+      </div>
+
+    <div class="info-container" >
+      <div class="company-info" data-aos="fade-up" data-aos-duration="100">
+        <img src="icon/car.png" alt="AutoCar" class="logo" />
         <p>
-          AutoMobil adalah sebuah platform web yang menyediakan layanan
-          Penjualan mobil dengan kemudahan, keamanan, dan harga yang kompetitif.
+          AutoCar is a web platform that provides car sales services with convenience, security and competitive prices
         </p>
         <div class="contact-info">
           <p>
             <img src="svg/whatsapp-logo.svg" alt="WhatsApp" /> +62 850 1099 7854
           </p>
-          <p><img src="svg/instagram-logo.svg" alt="Email" /> AutoMobilPedia</p>
+          <p><img src="svg/instagram-logo.svg" alt="Email" /> AutoCar88</p>
         </div>
       </div>
-      <div class="menu-section">
+      <div class="menu-section" data-aos="fade-up" data-aos-duration="200">
         <h3>Menu</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="html/about.html">Tentang Kami</a></li>
-          <li><a href="html/daftar-mobil.html">Daftar Mobil</a></li>
-          <li><a href="html/syarat&ketentuan.html">FAQS</a></li>
-          <li><a href="html/hubungi-Kami.html">Hubungi kami</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="car-list.html">Car List</a></li>
+          <li><a href="syarat&ketentuan.html">Terms and Conditions</a></li>
+          <li><a href="syarat&ketentuan.html">FAQS</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="socials-section">
+      <div class="socials-section" data-aos="fade-up" data-aos-duration="300">
         <h3>Socials</h3>
         <div class="social-icons">
-          <a href="Automobil"
-            ><img src="svg/tiktok-logo.svg" alt="WhatsApp"
+          <a href="https://www.tiktok.com/@auto_car_tirana?_t=8qRauto19yZ&_r=1"
+            ><img src="svg/tiktok-logo.svg" alt="Tiktok"
           /></a>
-          <a href="#Automobil"
+          <a href="https://www.instagram.com/autocar.88/profilecard/?igsh=MXZ2aGxzNTR4azU3MA=="
             ><img src="svg/instagram-logo.svg" alt="Instagram"
           /></a>
         </div>
       </div>
     </div>
 
-    <footer>
+    <footer >
       <div class="copyright">
-        <p>&copy; Copyright 2024 - AutoMobil</p>
+        <p>&copy; Copyright 2024 - AutoCar</p>
       </div>
       <div class="footer-links">
-        <a href="html/loginform.html">Admin Dashboard</a>
+        <a href="loginform.html">Admin Dashboard</a>
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

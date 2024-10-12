@@ -1,19 +1,3 @@
-const gridItems = document.querySelectorAll(".grid-item");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
-
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
@@ -35,3 +19,14 @@ socialIcons.forEach((icon) => {
     icon.style.transform = "scale(1)";
   });
 });
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}

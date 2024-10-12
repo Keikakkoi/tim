@@ -1,19 +1,3 @@
-const gridItems = document.querySelectorAll(".grid-item");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
-
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   if (window.scrollY > 50) {
@@ -22,6 +6,26 @@ window.addEventListener("scroll", function () {
   } else {
     header.style.padding = "1rem 0";
   }
+});
+
+function toggleSyarat(event) {
+  event.preventDefault();
+  const syaratSection = document.getElementById("syarat-dan-ketentuan");
+
+  if (syaratSection.classList.contains("hidden")) {
+    syaratSection.classList.remove("hidden");
+    syaratSection.classList.add("visible");
+  } else {
+    syaratSection.classList.remove("visible");
+    syaratSection.classList.add("hidden");
+  }
+}
+
+const faqButton = document.getElementById("faq-button");
+const faqSection = document.getElementById("faq");
+
+faqButton.addEventListener("click", () => {
+  faqSection.classList.toggle("hidden");
 });
 
 const socialIcons = document.querySelectorAll(".social-icons img");

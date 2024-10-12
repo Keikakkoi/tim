@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Car Company</title>
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <header>
+    <div class="container">
+      <div id="logo" data-aos="flip-down">
+        <h1>AutoCar</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="car-list.html" class="nav-link">Car List</a>
+          </li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li>
+            <a href="termsandconditions.html" class="nav-link">
+              Terms and Conditions</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <div class="contact-header">
+      <h1 data-aos="fade-up" data-aos-duration="100">
+        Contact Us - Car Purchase
+      </h1>
+      <p data-aos="fade-up" data-aos-duration="200">
+        Looking to buy a new car? Contact us today with your inquiries, and
+        we’ll help you get started!
+      </p>
+
+      <div class="info-contact-container">
+        <section class="contact-info-container">
+          <div class="info-block" data-aos="fade-up" data-aos-duration="100">
+            <h3>Email Us</h3>
+            <p>Auto@Mobil.com</p>
+          </div>
+          <div class="info-block" data-aos="fade-up" data-aos-duration="200">
+            <h3>Call Us</h3>
+            <p>+62 822 0404 2525</p>
+          </div>
+          <div class="info-block" data-aos="fade-up" data-aos-duration="300">
+            <h3>Visit Us</h3>
+            <p>123 Car Avenue, Jakarta, Indonesia</p>
+          </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media">
+          <h2 data-aos="fade-up" data-aos-duration="100">Follow Us</h2>
+          <div class="social-icons-png">
+            <img src="icon/facebook.png" alt="Facebook" />
+            <img src="icon/twitter.png" alt="X" />
+            <img src="icon/instagram.png" alt="Instagram" />
+            <img src="icon/linkedin.png" alt="Linkedin" />
+          </div>
+        </section>
+      </div>
+      </div>
+
+      <!-- Embedded Google Maps Section -->
+      <section class="map">
+        <h2 data-aos="fade-up" data-aos-duration="100">Our Location</h2>
+        <img
+          src="png/WhatsApp Image 2024-10-10 at 20.30.52_01b35c0b.jpg"
+          alt="location"
+          data-aos="fade-up"
+          data-aos-duration="200"
+        />
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="contact-form">
+        <h2 data-aos="fade-up" data-aos-duration="100">Car Purchase Inquiry</h2>
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+            data-aos="fade-up"
+            data-aos-duration="200"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            data-aos="fade-up"
+            data-aos-duration="300"
+          />
+
+          <label for="carModel">Car Model</label>
+          <input
+            type="text"
+            id="carModel"
+            name="carModel"
+            placeholder="Preferred Car Model"
+            data-aos="fade-up"
+            data-aos-duration="400"
+          />
+
+          <label for="contactMethod">Preferred Contact Method</label>
+          <select
+            id="contactMethod"
+            name="contactMethod"
+            required
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+          </select>
+
+          <label for="intent">Purchase Intent</label>
+          <select
+            id="intent"
+            name="intent"
+            required
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
+            <option value="justBrowsing">Just browsing</option>
+            <option value="interested">Interested in buying soon</option>
+            <option value="urgent">Looking to buy immediately</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Your Message (Optional)"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          ></textarea>
+
+          <button type="submit" data-aos="fade-up" data-aos-duration="100">
+            Submit Inquiry
+          </button>
+        </form>
+        <div id="formMessage" class="hidden"></div>
+      </section>
+    </div>
+
+    <div class="info-container">
+      <div class="company-info" data-aos="fade-up" data-aos-duration="100">
+        <img src="icon/car.png" alt="AutoCar" class="logo" />
+        <p>
+          AutoCar is a web platform that provides car sales services with
+          convenience, security and competitive prices
+        </p>
+        <div class="contact-info">
+          <p>
+            <img src="svg/whatsapp-logo.svg" alt="WhatsApp" /> +62 850 1099 7854
+          </p>
+          <p><img src="svg/instagram-logo.svg" alt="Email" /> AutoCar88</p>
+        </div>
+      </div>
+      <div class="menu-section" data-aos="fade-up" data-aos-duration="200">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="car-list.html">Car List</a></li>
+          <li><a href="termsandconditions.html">Terms and Conditions</a></li>
+          <li><a href="termsandconditions.html">FAQS</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="socials-section" data-aos="fade-up" data-aos-duration="300">
+        <h3>Socials</h3>
+        <div class="social-icons">
+          <a href="https://www.tiktok.com/@auto_car_tirana?_t=8qRauto19yZ&_r=1"
+            ><img src="svg/tiktok-logo.svg" alt="Tiktok"
+          /></a>
+          <a
+            href="https://www.instagram.com/autocar.88/profilecard/?igsh=MXZ2aGxzNTR4azU3MA=="
+            ><img src="svg/instagram-logo.svg" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <p>&copy; Copyright 2024 - AutoCar</p>
+      </div>
+      <div class="footer-links">
+        <a href="loginform.html">Admin Dashboard</a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="js/contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-image: url("/img/lamborghini-huracan-lb-performance-4k-0e-1920x1080.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(90, 83, 113, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.container {
+  width: 100%;
+  height: 10vh;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #3498db;
+  border-radius: 0 0 10px 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  margin-top: 10px;
+  justify-content: center;
+  margin-left: 15%;
+  padding: 1rem 0;
+  position: fixed;
+  height: auto;
+  top: 0;
+  width: 70%;
+  z-index: 1000;
+}
+
+header:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#logo {
+  float: left;
+  padding: 10px 10px;
+}
+
+.container #logo h1 {
+  background: linear-gradient(to right, rgb(65, 56, 56), #b6b1b1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+.nav-link:hover {
+  background-color: grey;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+}
+
+#syarat-dan-ketentuan {
+  margin: 180px 30px 50px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#syarat-dan-ketentuan h2 {
+  margin-left: 10px;
+  background: linear-gradient(to right, #030303, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#syarat-dan-ketentuan ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+#syarat-dan-ketentuan li {
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 30px;
+  gap: 1rem;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#syarat-dan-ketentuan li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+.description {
+  font-weight: bold;
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #322c2c, #948f8f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#syarat-dan-ketentuan p {
+  gap: 1rem;
+  padding: 5px 5px;
+  margin-top: 5px;
+  background: linear-gradient(to right, #030303, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-link-contact {
+  color: #ccc;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container {
+    margin-top: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+}
+
+#faq {
+  margin: 30px;
+  padding: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#faq h2 {
+  background: linear-gradient(to right, #030303, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+details {
+  margin: 10px 0;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 0 10px;
+}
+
+summary:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+details[open] summary {
+  background-color: grey;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+details p {
+  padding: 10px;
+  margin-left: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 0px 20px 20px;
+}
+
+.info-container {
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: black;
+  padding: 40px;
+  margin-top: 100px;
+}
+
+.company-info {
+  flex: 2;
+}
+
+.company-info .logo {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.company-info p {
+  color: black;
+  margin-bottom: 15px;
+  font-size: 20px;
+  width: 60%;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.contact-info img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.menu-section,
+.socials-section {
+  flex: 1;
+}
+
+.menu-section h3 {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.socials-section h3 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  margin-left: 50%;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section ul li {
+  margin-bottom: 10px;
+}
+
+.menu-section ul li a:hover {
+  color: #2980b9;
+}
+
+.menu-section ul li a,
+.socials-section a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 55%;
+}
+
+.social-icons a {
+  margin-right: 15px;
+}
+
+.social-icons img {
+  width: 24px;
+}
+
+/* Footer styles */
+footer {
+  border-top: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 12px;
+  margin-bottom: 0px;
+  height: 10vh;
+}
+
+footer .copyright {
+  display: flex;
+  width: 60%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+footer .copyright p {
+  color: black;
+}
+
+footer .copyright p:hover {
+  color: #0062a4;
+  text-decoration: underline;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  margin-right: 10px;
+  display: flex;
+}
+
+.footer-links a:hover {
+  color: #0062a4;
+  text-decoration: underline;
+}
