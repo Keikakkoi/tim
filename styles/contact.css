@@ -5,14 +5,11 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-image: url("/img/lamborghini-huracan-lb-performance-4k-0e-1920x1080.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  cursor: url("https:codetheworld.io/wp-content/uploads/2024/10/cursor.png"),
+    auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -29,56 +26,41 @@ body::-webkit-scrollbar-thumb {
   -webkit-backdrop-filter: blur(10px);
 }
 
-.container {
-  width: 100%;
-  height: 10vh;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 header {
-  background-color: #3498db;
-  border-radius: 0 0 10px 10px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 60px;
-  margin-top: 10px;
+  background-color: white;
+  display: flex;
+  position: relative;
+}
+
+.container {
+  background-color: #64b5f6;
+  width: 100%;
+  margin-top: -15px;
+  padding: 10px 20px 0;
   justify-content: center;
-  margin-left: 15%;
-  padding: 1rem 0;
+  text-align: center;
   position: fixed;
-  height: auto;
-  top: 0;
-  width: 70%;
-  z-index: 1000;
-}
-
-header:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-#logo {
-  float: left;
-  padding: 10px 10px;
+  z-index: 1500;
 }
 
 .container #logo h1 {
-  background: linear-gradient(to right, rgb(65, 56, 56), #b6b1b1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-header .container {
+  float: left;
+  padding: 10px 10px;
+  color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5em;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
 nav ul {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   list-style: none;
+  margin-top: 25px;
+  padding-right: 30px;
 }
 
 .nav-link {
@@ -97,6 +79,12 @@ nav ul {
   border-radius: 50px;
 }
 
+main {
+  padding: 5px 0;
+  border-radius: 8px;
+  width: 100%;
+}
+
 .contact-header {
   justify-content: center;
   text-align: center;
@@ -111,10 +99,7 @@ nav ul {
 .contact-header h1 {
   margin: 0;
   font-size: 3rem;
-  background: linear-gradient(to right, #030303, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
 }
 
 .contact-header p {
@@ -153,10 +138,7 @@ nav ul {
 .social-media h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #030303, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
 }
 
 .social-icons-png {
@@ -191,17 +173,15 @@ nav ul {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #030303, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
 }
 
-.map img {
+.map iframe {
   justify-content: center;
   text-align: center;
   place-items: center;
   width: 100%;
+  height: 100vh;
   border-radius: 10px;
 }
 
@@ -219,9 +199,7 @@ nav ul {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #030303, #ffffff);
-  background-clip: text;
-  color: transparent;
+  color: #141414;
 }
 
 .contact-form label {
@@ -252,10 +230,7 @@ nav ul {
 
 .contact-form button {
   padding: 12px 30px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid white;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #007bff;
   border-radius: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   color: white;
@@ -334,9 +309,7 @@ nav ul {
   right: 0;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #0077b6;
   color: black;
   padding: 40px;
   margin-top: 100px;
@@ -422,9 +395,7 @@ nav ul {
 /* Footer styles */
 footer {
   border-top: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #0062a4;
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
@@ -433,7 +404,6 @@ footer {
   margin-right: 0px;
   font-size: 12px;
   margin-bottom: 0px;
-  height: 10vh;
 }
 
 footer .copyright {

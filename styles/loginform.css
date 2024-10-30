@@ -13,6 +13,9 @@ body {
   width: 100%;
   padding: 10px;
   background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  cursor: url("https:codetheworld.io/wp-content/uploads/2024/10/cursor.png"),
+    auto;
+  font-family: "en-med";
 }
 
 body::before {

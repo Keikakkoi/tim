@@ -1,13 +1,3 @@
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  if (window.scrollY > 50) {
-    header.style.padding = "0.5rem 0";
-    header.style.transition = "padding 0.3s ease-in-out";
-  } else {
-    header.style.padding = "1rem 0";
-  }
-});
-
 function toggleSyarat(event) {
   event.preventDefault();
   const syaratSection = document.getElementById("syarat-dan-ketentuan");

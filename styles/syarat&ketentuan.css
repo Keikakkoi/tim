@@ -5,14 +5,11 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-image: url("/img/lamborghini-huracan-lb-performance-4k-0e-1920x1080.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  cursor: url("https:codetheworld.io/wp-content/uploads/2024/10/cursor.png"),
+    auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -29,56 +26,41 @@ body::-webkit-scrollbar-thumb {
   -webkit-backdrop-filter: blur(10px);
 }
 
-.container {
-  width: 100%;
-  height: 10vh;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 header {
-  background-color: #3498db;
-  border-radius: 0 0 10px 10px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 60px;
-  margin-top: 10px;
+  background-color: white;
+  display: flex;
+  position: relative;
+}
+
+.container {
+  background-color: #64b5f6;
+  width: 100%;
+  margin-top: -15px;
+  padding: 10px 20px 0;
   justify-content: center;
-  margin-left: 15%;
-  padding: 1rem 0;
+  text-align: center;
   position: fixed;
-  height: auto;
-  top: 0;
-  width: 70%;
-  z-index: 1000;
-}
-
-header:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-#logo {
-  float: left;
-  padding: 10px 10px;
+  z-index: 1500;
 }
 
 .container #logo h1 {
-  background: linear-gradient(to right, rgb(65, 56, 56), #b6b1b1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-header .container {
+  float: left;
+  padding: 10px 10px;
+  color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5em;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
 nav ul {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   list-style: none;
+  margin-top: 25px;
+  padding-right: 30px;
 }
 
 .nav-link {
@@ -97,22 +79,22 @@ nav ul {
   border-radius: 50px;
 }
 
+main {
+  padding: 5px 0;
+  border-radius: 8px;
+  width: 100%;
+}
+
 #syarat-dan-ketentuan {
   margin: 180px 30px 50px;
   padding: 20px;
   border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 #syarat-dan-ketentuan h2 {
   margin-left: 10px;
-  background: linear-gradient(to right, #030303, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
   font-size: 2em;
   margin-bottom: 10px;
 }
@@ -149,26 +131,20 @@ nav ul {
   margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
-  background: linear-gradient(to right, #322c2c, #948f8f);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
 }
 
 #syarat-dan-ketentuan p {
   gap: 1rem;
   padding: 5px 5px;
   margin-top: 5px;
-  background: linear-gradient(to right, #030303, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
   justify-content: center;
   text-align: center;
 }
 
 .nav-link-contact {
-  color: #ccc;
+  color: #0077b6;
 }
 
 .icon {
@@ -199,17 +175,10 @@ nav ul {
   margin: 30px;
   padding: 20px;
   padding: 20px;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 #faq h2 {
-  background: linear-gradient(to right, #030303, #ffffff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #141414;
   justify-content: center;
   text-align: center;
   font-size: 2em;
@@ -225,7 +194,7 @@ summary {
   cursor: pointer;
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
   border-radius: 0 10px;
 }
 
@@ -236,6 +205,7 @@ summary:hover {
 
 details[open] summary {
   background-color: grey;
+  color: white;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -243,7 +213,7 @@ details[open] summary {
 details p {
   padding: 10px;
   margin-left: 1rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(123, 112, 112, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 0 0px 20px 20px;
@@ -255,9 +225,7 @@ details p {
   right: 0;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #0077b6;
   color: black;
   padding: 40px;
   margin-top: 100px;
@@ -343,9 +311,7 @@ details p {
 /* Footer styles */
 footer {
   border-top: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #0062a4;
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
@@ -354,7 +320,6 @@ footer {
   margin-right: 0px;
   font-size: 12px;
   margin-bottom: 0px;
-  height: 10vh;
 }
 
 footer .copyright {
