@@ -10,18 +10,23 @@
   <body>
     <header>
       <div class="container">
-        <div id="logo" data-aos="flip-down">
+        <div id="logo">
           <h1>AutoCar</h1>
         </div>
         <nav>
-          <ul>
+          <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="car-list.html" class="nav-link">Car List</a></li>
             <li><a href="about.html" class="nav-link">About Us</a></li>
-            <li><a href="termsandconditions.html" class="nav-link"> Terms and Conditions</a></li>
+            <li><a href="termsandconditions.html" class="nav-link">Terms and Conditions</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </header>
 
@@ -258,9 +263,6 @@
     <footer >
       <div class="copyright">
         <p>&copy; Copyright 2024 - AutoCar</p>
-      </div>
-      <div class="footer-links">
-        <a href="loginform.html">Admin Dashboard</a>
       </div>
     </footer>
 
