@@ -183,43 +183,16 @@ function changeCar(brand) {
   if (brand === "all") {
     for (let key in cars) {
       cars[key].forEach((car) => {
-        carGallery.innerHTML += `
-            <div class="car-item" data-aos="fade-up" data-aos-duration="300">
-              <img src="${car.image}" alt="${car.details}">
-              <div class="car-details">
-                <h3>${car.details}</h3>
-                <div class="car-icons">
-                  <img src="icon/fuel.png" alt="Fuel Icon"> 
-                  <p>Fuel: ${car.fuel}</p>
-                </div>
-                <div class="car-icons">
-                  <img src="icon/car-seat.png" alt="Seats Icon"> 
-                  <p>Seats: ${car.seats}</p>
-                </div>
-                <div class="car-icons">
-                  <img src="icon/calendar.png" alt="Year Icon"> 
-                  <p>Model: ${car.modelYear}</p>
-                </div>
-                <div class="car-price">${car.price}</div>
-              </div>
-                  <div class="purchase-container">
-            <button class="purchase-button">
-              Purchase <img src="/icon/cart.png" alt="Icon"> 
-            </button>
-          </div>
-            </div>
-          `;
-      });
-    }
-  } else {
-    cars[brand].forEach((car) => {
-      carGallery.innerHTML += `
-          <div class="car-item">
+        const carItemDiv = document.createElement("div");
+        carItemDiv.className = "car-item";
+        carItemDiv.setAttribute("data-aos", "fade-up");
+        carItemDiv.setAttribute("data-aos-duration", "300");
+        carItemDiv.innerHTML = `
             <img src="${car.image}" alt="${car.details}">
             <div class="car-details">
               <h3>${car.details}</h3>
               <div class="car-icons">
-                <img src="icon/fuel.png" alt="Fuel Icon">
+                <img src="icon/fuel.png" alt="Fuel Icon"> 
                 <p>Fuel: ${car.fuel}</p>
               </div>
               <div class="car-icons">
@@ -227,18 +200,57 @@ function changeCar(brand) {
                 <p>Seats: ${car.seats}</p>
               </div>
               <div class="car-icons">
-                <img src="icon/calendar.png" alt="Year Icon">
+                <img src="icon/calendar.png" alt="Year Icon"> 
                 <p>Model: ${car.modelYear}</p>
               </div>
               <div class="car-price">${car.price}</div>
             </div>
+            <div class="purchase-container">
+              <button class="purchase-button" 
+                      data-merk="${key}" 
+                      data-nama="${car.details}" 
+                      data-harga="${car.price}" 
+                      data-tahun="${car.modelYear}">
+                Purchase <img src="/icon/cart.png" alt="Icon"> 
+              </button>
+            </div>
+        `;
+        carGallery.appendChild(carItemDiv);
+      });
+    }
+  } else {
+    cars[brand].forEach((car) => {
+      const carItemDiv = document.createElement("div");
+      carItemDiv.className = "car-item";
+      carItemDiv.innerHTML = `
+          <img src="${car.image}" alt="${car.details}">
+          <div class="car-details">
+            <h3>${car.details}</h3>
+            <div class="car-icons">
+              <img src="icon/fuel.png" alt="Fuel Icon">
+              <p>Fuel: ${car.fuel}</p>
+            </div>
+            <div class="car-icons">
+              <img src="icon/car-seat.png" alt="Seats Icon"> 
+              <p>Seats: ${car.seats}</p>
+            </div>
+            <div class="car-icons">
+              <img src="icon/calendar.png" alt="Year Icon">
+              <p>Model: ${car.modelYear}</p>
+            </div>
+            <div class="car-price">${car.price}</div>
+          </div>
           <div class="purchase-container">
-            <button class="purchase-button">
+            <button class="purchase-button"
+                    data-merk="${brand}" 
+                    data-nama="${car.details}" 
+                    data-harga="${car.price}" 
+                    data-tahun="${car.modelYear}">
               Purchase <img src="/icon/cart.png" alt="Icon">
             </button>
           </div>
-          </div>
-        `;
+      `;
+      carGallery.appendChild(carItemDiv);
     });
   }
 
@@ -248,6 +260,41 @@ function changeCar(brand) {
     if (button.innerText.toLowerCase() === brand) {
       button.classList.add("active");
     }
+  });
+
+  // Add event listeners to purchase buttons
+  const purchaseButtons = document.querySelectorAll(".purchase-button");
+  purchaseButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const merk = this.getAttribute("data-merk");
+      const nama = this.getAttribute("data-nama");
+      const harga = this.getAttribute("data-harga");
+      const tahun = this.getAttribute("data-tahun");
+
+      // Create a form dynamically to submit data
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = "formpurchase.php";
+
+      // Create input fields for each data attribute
+      const fields = [
+        { name: "merk_mobil", value: merk },
+        { name: "nama_mobil", value: nama },
+        { name: "harga_mobil", value: harga },
+        { name: "tahun_mobil", value: tahun },
+      ];
+
+      fields.forEach((field) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = field.name;
+        input.value = field.value;
+        form.appendChild(input);
+      });
+
+      document.body.appendChild(form);
+      form.submit();
+    });
   });
 }
 

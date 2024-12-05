@@ -10,9 +10,6 @@ body {
   cursor: url("https:codetheworld.io/wp-content/uploads/2024/10/cursor.png"),
     auto;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
@@ -25,7 +22,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00aaff;
+  background-color: rgba(90, 83, 113, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -129,7 +126,6 @@ nav ul {
     display: block;
     position: absolute;
     right: 0;
-    top: -300px;
     width: 100%;
     background: #64b5f6;
     padding: 10px 0;
@@ -141,7 +137,6 @@ nav ul {
   }
 
   .nav-menu.active {
-    margin-top: -12px;
     opacity: 1;
     visibility: visible;
   }
@@ -188,6 +183,10 @@ nav ul {
     transform: translateX(10px);
     border-radius: 5px;
   }
+
+  .nav-menu.active {
+    margin-top: -12px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -196,9 +195,10 @@ nav ul {
   }
 
   .nav-menu.active {
-    margin-top: 12px;
+    margin-top: -14px;
   }
 }
+
 main {
   padding: 5px 0;
   border-radius: 8px;
@@ -209,15 +209,16 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
-  max-width: 1600px;
-  padding: 90px;
-  border-radius: 50px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  padding: 50px;
 }
 
 .text-content {
   flex: 1;
-  padding-right: 30px;
+  padding-right: 20px;
+  margin-left: 10%;
+  font-size: 1.4em;
 }
 
 .image-content {
@@ -238,7 +239,7 @@ h1 span {
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: #141414;
   -webkit-background-clip: text;
   background-clip: text;
@@ -280,51 +281,6 @@ img {
   color: #141414;
   margin-bottom: 5rem;
   text-align: center;
-}
-
-.features-intro {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 3em;
-  background-color: #0077b6;
-  margin: 0 30px;
-  border-radius: 5px;
-}
-
-.feature-intro {
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  margin: 30px 20px;
-}
-
-.feature-intro img {
-  height: 4rem;
-  width: 50px;
-}
-
-.feature-intro h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.feature-intro p {
-  color: white;
-  font-size: 15px;
-}
-
-@media screen and (max-width: 768px) {
-  .features-intro {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-    background-color: #0077b6;
-    margin-left: 30px;
-    border-radius: 5px;
-  }
 }
 
 .hero-text h3 {
@@ -608,15 +564,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-
-  .container #logo h1 {
-    margin-left: 10px;
-    font-size: 1.2em;
-  }
-
   .content-wrapper {
     flex-direction: column;
     padding: 20px;
@@ -724,15 +671,13 @@ img {
 
 @media screen and (max-width: 480px) {
   .container #logo h1 {
-    font-size: 1.8em;
     justify-content: center;
     text-align: center;
-    margin-top: 18px;
-    margin-left: 50px;
+    margin-left: 38px;
+    font-size: 25px;
   }
 
   .hamburger {
-    margin-top: 10px;
     width: 25px;
     height: 25px;
   }
@@ -740,16 +685,6 @@ img {
   .text-content h1 {
     margin-top: 20px;
     font-size: 1.8em;
-  }
-
-  .features-intro {
-    margin: 0 15px;
-  }
-
-  .feature-intro {
-    padding: 15px;
-    width: 100%;
-    margin: 15px 10px;
   }
 
   .carousel-item {
@@ -762,7 +697,7 @@ img {
   }
 
   .company-container img {
-    width: 50px;
+    width: 100px;
   }
 
   .menu-section h3,
@@ -797,6 +732,11 @@ img {
 }
 
 @media screen and (max-width: 480px) {
+  .content-wrapper {
+    text-align: left;
+    margin-right: 30px;
+  }
+
   .social-media {
     margin: 40px 20px;
   }
@@ -884,6 +824,7 @@ footer {
 footer .copyright {
   justify-content: center;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 footer .copyright p {

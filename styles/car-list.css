@@ -25,7 +25,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00aaff
+  background-color: #00aaff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -205,7 +205,7 @@ nav ul {
   text-align: center;
 }
 
-.buttons {
+.purchase-buttons {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
